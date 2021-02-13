@@ -125,8 +125,8 @@ public class MagicHatGUI extends JFrame {
 					JOptionPane.showMessageDialog(null, "Lütfen Bir Kullanıcı Adı Giriniz", "Uyarı",
 							JOptionPane.INFORMATION_MESSAGE);
 				} else {
-					try {
-						dosya = new File("C:/Users/mgmet/OneDrive/Masaüstü/MagicHat.txt");
+					try {//Kendine Göre Değiştir
+						dosya = new File("C:/MagicHat.txt");
 					} catch (Exception e1) {
 						e1.printStackTrace();
 					}
