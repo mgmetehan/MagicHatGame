@@ -103,7 +103,7 @@ public class MagicHatGUI extends JFrame {
 		lblOyuncuBilgileri.setBounds(10, 10, 192, 32);
 		panelPlayer.add(lblOyuncuBilgileri);
 
-		lblAd = new JLabel("Adınızı Giriniz:");
+		lblAd = new JLabel("Adinizi Giriniz:");
 		lblAd.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 16));
 		lblAd.setBounds(10, 44, 114, 32);
 		panelPlayer.add(lblAd);
@@ -114,7 +114,7 @@ public class MagicHatGUI extends JFrame {
 		panelPlayer.add(txtAd);
 		txtAd.setColumns(10);
 
-		btnBaslat = new JButton("Başlat");
+		btnBaslat = new JButton("Baslat");
 		btnBaslat.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				count = 0;
@@ -122,11 +122,11 @@ public class MagicHatGUI extends JFrame {
 				if (txtAd.getText().length() == 0) {
 					panelGame.setVisible(false);
 					txtAd.setText("");
-					JOptionPane.showMessageDialog(null, "Lütfen Bir Kullanıcı Adı Giriniz", "Uyarı",
+					JOptionPane.showMessageDialog(null, "Lutfen Bir Kullanici Adi Giriniz", "Uyari",
 							JOptionPane.INFORMATION_MESSAGE);
 				} else {
-					try {//Kendine Göre Değiştir
-						dosya = new File("C:/MagicHat.txt");
+					try {
+						dosya = new File("C:/Users/mgmet/OneDrive/Masaustu/MagicHat.txt");
 					} catch (Exception e1) {
 						e1.printStackTrace();
 					}
@@ -147,7 +147,7 @@ public class MagicHatGUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				panelGame.setVisible(false);
 				txtAd.setText("");
-				JOptionPane.showMessageDialog(null, "Yeni Kullanıcı Bilgilerinizi Giriniz!", "Kayıt",
+				JOptionPane.showMessageDialog(null, "Yeni Kullanici Bilgilerinizi Giriniz!", "Kayit",
 						JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
@@ -156,7 +156,7 @@ public class MagicHatGUI extends JFrame {
 		btnYeniOyuncu.setBounds(394, 61, 310, 78);
 		panelPlayer.add(btnYeniOyuncu);
 
-		JButton btnQuit = new JButton("Çık");
+		JButton btnQuit = new JButton("Cik");
 		btnQuit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (!dosya.exists()) {
@@ -191,7 +191,7 @@ public class MagicHatGUI extends JFrame {
 		panelGame.setVisible(false);
 		panelGame.setLayout(null);
 
-		lblSoru = new JLabel("Kırmızı Top Hangi Şapkanın Anltında? Tahmin Et!");
+		lblSoru = new JLabel("Kirmizi Top Hangi Sapkanin Anltinda? Tahmin Et!");
 		lblSoru.setForeground(Color.BLUE);
 		lblSoru.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 18));
 		lblSoru.setBackground(Color.WHITE);
@@ -265,7 +265,7 @@ public class MagicHatGUI extends JFrame {
 						}
 						lblSkor.setText(swap);
 						btn_orta.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/dolu.png")));
-						lblSonuc.setText("Tebrikler Topu Buldunuz +150 Puan Kazandınız");
+						lblSonuc.setText("Tebrikler Topu Buldunuz +150 Puan Kazandiniz");
 						lblSonuc.setForeground(Color.GREEN);
 					} else {
 						String swap;
@@ -274,10 +274,10 @@ public class MagicHatGUI extends JFrame {
 						puan = Integer.valueOf(swap);
 						puan -= 100;
 						btn_orta.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/bos.png")));
-						lblSonuc.setText("Maalesef Topu Bulamadınız -100 Puan Kaybettiniz");
+						lblSonuc.setText("Maalesef Topu Bulamadiniz -100 Puan Kaybettiniz");
 						lblSonuc.setForeground(Color.RED);
 						if (puan < 0) {
-							JOptionPane.showMessageDialog(null, "Öldünüz!!Baştan Başlayınız", "Uyarı",
+							JOptionPane.showMessageDialog(null, "Oldunuz!!Bastan Baslayiniz", "Uyari",
 									JOptionPane.ERROR_MESSAGE);
 							btn_orta.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/kapali.png")));
 							panelGame.setVisible(false);
@@ -287,7 +287,7 @@ public class MagicHatGUI extends JFrame {
 						lblSkor.setText(swap);
 					}
 				} else {
-					JOptionPane.showMessageDialog(null, "Birden Fazla Seçim Yapamazsınız!!", "Uyarı",
+					JOptionPane.showMessageDialog(null, "Birden Fazla Secim Yapamazsiniz!!", "Uyari",
 							JOptionPane.INFORMATION_MESSAGE);
 					btn_orta.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/kapali.png")));
 					btn_sag.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/kapali.png")));
@@ -322,7 +322,7 @@ public class MagicHatGUI extends JFrame {
 						}
 						lblSkor.setText(swap);
 						btn_sag.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/dolu.png")));
-						lblSonuc.setText("Tebrikler Topu Buldunuz +150 Puan Kazandınız");
+						lblSonuc.setText("Tebrikler Topu Buldunuz +150 Puan Kazandiniz");
 						lblSonuc.setForeground(Color.GREEN);
 					} else {
 						String swap;
@@ -331,10 +331,10 @@ public class MagicHatGUI extends JFrame {
 						puan = Integer.valueOf(swap);
 						puan -= 100;
 						btn_sag.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/bos.png")));
-						lblSonuc.setText("Maalesef Topu Bulamadınız -100 Puan Kaybettiniz");
+						lblSonuc.setText("Maalesef Topu Bulamadiniz -100 Puan Kaybettiniz");
 						lblSonuc.setForeground(Color.RED);
 						if (puan < 0) {
-							JOptionPane.showMessageDialog(null, "Öldünüz!!Baştan Başlayınız", "Uyarı",
+							JOptionPane.showMessageDialog(null, "Oldunuz!!Bastan Baslayiniz", "Uyari",
 									JOptionPane.ERROR_MESSAGE);
 							btn_sag.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/kapali.png")));
 							panelGame.setVisible(false);
@@ -344,7 +344,7 @@ public class MagicHatGUI extends JFrame {
 						lblSkor.setText(swap);
 					}
 				} else {
-					JOptionPane.showMessageDialog(null, "Birden Fazla Seçim Yapamazsınız!!", "Uyarı",
+					JOptionPane.showMessageDialog(null, "Birden Fazla Secim Yapamazsiniz!!", "Uyari",
 							JOptionPane.INFORMATION_MESSAGE);
 					btn_orta.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/kapali.png")));
 					btn_sag.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/kapali.png")));
@@ -382,7 +382,7 @@ public class MagicHatGUI extends JFrame {
 						lblSkor.setText(swap);
 						btn_sol.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/dolu.png")));
 						lblSonuc.setForeground(Color.GREEN);
-						lblSonuc.setText("Tebrikler Topu Buldunuz +150 Puan Kazandınız");
+						lblSonuc.setText("Tebrikler Topu Buldunuz +150 Puan Kazandiniz");
 					} else {
 						String swap;
 						int puan;
@@ -391,9 +391,9 @@ public class MagicHatGUI extends JFrame {
 						puan -= 100;
 						btn_sol.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/bos.png")));
 						lblSonuc.setForeground(Color.RED);
-						lblSonuc.setText("Maalesef Topu Bulamadınız -100 Puan Kaybettiniz");
+						lblSonuc.setText("Maalesef Topu Bulamadiniz -100 Puan Kaybettiniz");
 						if (puan < 0) {
-							JOptionPane.showMessageDialog(null, "Öldünüz!!Baştan Başlayınız", "Uyarı",
+							JOptionPane.showMessageDialog(null, "Oldunuz!!Bastan Baslayiniz", "Uyari",
 									JOptionPane.ERROR_MESSAGE);
 							btn_sol.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/kapali.png")));
 							panelGame.setVisible(false);
@@ -403,7 +403,7 @@ public class MagicHatGUI extends JFrame {
 						lblSkor.setText(swap);
 					}
 				} else {
-					JOptionPane.showMessageDialog(null, "Birden Fazla Seçim Yapamazsınız!!", "Uyarı",
+					JOptionPane.showMessageDialog(null, "Birden Fazla Secim Yapamazsiniz!!", "Uyari",
 							JOptionPane.INFORMATION_MESSAGE);
 					btn_orta.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/kapali.png")));
 					btn_sag.setIcon(new ImageIcon(MagicHatGUI.class.getResource("/img/kapali.png")));
@@ -430,7 +430,7 @@ public class MagicHatGUI extends JFrame {
 		lblSonuc.setBounds(212, 235, 439, 38);
 		panelGame.add(lblSonuc);
 
-		lblBirinci = new JLabel("En Yüksek Skor  :");
+		lblBirinci = new JLabel("En Yuksek Skor  :");
 		lblBirinci.setForeground(Color.ORANGE);
 		lblBirinci.setToolTipText("");
 		lblBirinci.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 16));
